@@ -22,6 +22,9 @@ const connect = function () {
   conn.on('connect', () => {
     conn.write("Name: jxp");
   });
+  conn.on('data', () => {
+    conn.write("Say: Hi!");
+  });
 
   // setInterval(() =>
   //   conn.on('connect', () => {
@@ -39,11 +42,12 @@ const connect = function () {
   //   conn.write("Move: left");
   // });
 
-
-
-
   return conn;
 }
 
 console.log('Connecting ...');
-connect();
+// connect();
+
+module.exports = { connect };
+
+
