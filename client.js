@@ -19,10 +19,27 @@ const connect = function () {
   conn.on('connect', () => {
     console.log("Successfully connected to game server");
   });
-
   conn.on('connect', () => {
     conn.write("Name: jxp");
   });
+
+  // setInterval(() =>
+  //   conn.on('connect', () => {
+  //     conn.write("Move: down");
+  //   }), 50)
+
+  // setTimeout(() => {
+  //   conn.on('data', () => {
+  //     conn.write("Move: right")
+  //   }, 1000);
+  // })
+
+
+  // conn.on('connect', () => {
+  //   conn.write("Move: left");
+  // });
+
+
 
 
   return conn;
